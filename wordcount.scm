@@ -15,33 +15,22 @@
 (define wordcount-widgets '(widget_wordcount_input_mode))
 
 ;; default activity for each widgets
-(define default-widget_wordcount_input_mode 'action_wordcount_selection)
+(define default-widget_wordcount_input_mode 'action_wordcount_on)
 
 ;; actions of widget_wordcount_input_mode
 (define wordcount-input-mode-actions
-  '(action_wordcount_selection action_wordcount_clipboard))
+  '(action_wordcount_on))
 
 ;;; implementations
 
-(register-action 'action_wordcount_selection
+(register-action 'action_wordcount_on
                  (lambda (pc)
                    '(unknown
                      "W"
                      "wordcount"
                      "word count on selection"))
                  (lambda (pc) #t)
-                 (lambda (pc)
-                  (wordcount-on-selection pc)))
-
-(register-action 'action_wordcount_clipboard
-                 (lambda (pc)
-                   '(unknown
-                     "W"
-                     "wordcount"
-                     "word count on clipboard"))
-                 (lambda (pc) #f)
-                 (lambda (pc)
-                  (wordcount-on-clipboard pc)))
+                 #f)  ;; no action handler
 
 ;; Update widget definitions based on action configurations. The
 ;; procedure is needed for on-the-fly reconfiguration involving the
