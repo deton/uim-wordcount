@@ -9,38 +9,6 @@
 (define wordcount-char-key? (make-key-predicate '("c")))
 (define wordcount-byte-key? (make-key-predicate '("b")))
 
-;; widgets and actions
-
-;; widgets
-(define wordcount-widgets '(widget_wordcount_input_mode))
-
-;; default activity for each widgets
-(define default-widget_wordcount_input_mode 'action_wordcount_on)
-
-;; actions of widget_wordcount_input_mode
-(define wordcount-input-mode-actions
-  '(action_wordcount_on))
-
-;;; implementations
-
-(register-action 'action_wordcount_on
-                 (lambda (pc)
-                   '(unknown
-                     "W"
-                     "wordcount"
-                     "word count on selection"))
-                 (lambda (pc) #t)
-                 #f)  ;; no action handler
-
-;; Update widget definitions based on action configurations. The
-;; procedure is needed for on-the-fly reconfiguration involving the
-;; custom API
-(define wordcount-configure-widgets
-  (lambda ()
-    (register-widget 'widget_wordcount_input_mode
-                     (activity-indicator-new wordcount-input-mode-actions)
-                     (actions-new wordcount-input-mode-actions))))
-
 (define wordcount-context-rec-spec
   (append
     context-rec-spec
@@ -56,7 +24,6 @@
 (define wordcount-context-new
   (lambda args
     (let ((pc (apply wordcount-context-new-internal args)))
-      (wordcount-context-set-widgets! pc wordcount-widgets)
       pc)))
 
 (define wordcount-init-handler
@@ -109,8 +76,6 @@
 
 (define (wordcount-focus-in-handler pc)
   (wordcount-on-selection pc))
-
-(wordcount-configure-widgets)
 
 (register-im
  'wordcount
