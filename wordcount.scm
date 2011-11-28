@@ -152,10 +152,10 @@
           (loop rest (+ count 1)))))))
 
 (define (wordcount-count-char str)
-  (with-char-codec "UTF-8"
-    (lambda ()
-      (let ((u8str (string-copy str)))
-        (string-length (%%string-reconstruct! u8str))))))
+  (string-length
+    (with-char-codec "UTF-8"
+      (lambda ()
+        (%%string-reconstruct! (string-copy str))))))
 
 (define (wordcount-count-byte str)
   (string-length str))
