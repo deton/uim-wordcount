@@ -3,7 +3,7 @@
 (require-extension (srfi 1 2 8))
 
 (define wordcount-selection-key? (make-key-predicate '("s")))
-(define wordcount-clipboard-key? (make-key-predicate '("v")))
+(define wordcount-clipboard-key? (make-key-predicate '("<IgnoreCase><Shift>s")))
 (define wordcount-line-key? (make-key-predicate '("l")))
 (define wordcount-word-key? (make-key-predicate '("w")))
 (define wordcount-char-key? (make-key-predicate '("c")))
@@ -63,7 +63,7 @@
     ((2) (list (wordcount-context-char pc) "char" ""))
     ((3) (list (wordcount-context-byte pc) "byte" ""))
     ((4) (list "s:selection" "s" ""))
-    ((5) (list "v:clipboard" "v" ""))))
+    ((5) (list "S:clipboard" "S" ""))))
 
 (define (wordcount-set-candidate-index-handler pc idx)
   (case idx
