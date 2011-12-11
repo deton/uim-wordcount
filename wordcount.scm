@@ -108,7 +108,7 @@
 
 (register-im
  'wordcount
- ""
+ "*"
  "UTF-8"
  (N_ "wordcount")
  (N_ "word counter")
