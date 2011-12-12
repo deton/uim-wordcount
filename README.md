@@ -3,7 +3,8 @@ uim-wordcount
 
 uim-wordcountはwcコマンドのuim IM版です。
 セレクションやクリップボード内のテキストの
-行数・単語数(英文)・文字数・(UTF-8での)バイト数を数えて表示します。
+行数・単語数(英文)・文字数(改行・空白含む)・(UTF-8での)バイト数
+を数えて表示します。
 
 ![表示例](https://github.com/deton/uim-wordcount/uim-wordcount-capture.png 表示例)
 
