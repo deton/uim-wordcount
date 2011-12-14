@@ -39,6 +39,7 @@ uim-pref-gtkやuim-pref-qt4を起動し、
 ========
 
 uim-toolbarや「一時切り替えキー」を使って、wordcount IMに切り替えます。
+![アイコン](https://github.com/deton/uim-wordcount/pixmaps/wordcount.png アイコン)
 
 文字列を選択して、sキーを押すと文字数等が表示されます。
 
