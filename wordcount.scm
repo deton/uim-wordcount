@@ -37,6 +37,7 @@
 (define wordcount-word-key? (make-key-predicate '("w")))
 (define wordcount-char-key? (make-key-predicate '("c")))
 (define wordcount-byte-key? (make-key-predicate '("b")))
+(define wordcount-switch-default-im-key? (make-key-predicate '("<IgnoreShift>~")))
 
 (define wordcount-context-rec-spec
   (append
@@ -79,6 +80,8 @@
         (im-commit pc (wordcount-context-char pc)))
       ((wordcount-byte-key? key key-state)
         (im-commit pc (wordcount-context-byte pc)))
+      ((wordcount-switch-default-im-key? key key-state)
+        (im-switch-im pc default-im-name))
       (else
         (im-commit-raw pc)))))
 
