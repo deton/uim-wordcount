@@ -13,10 +13,10 @@ uim-wordcountはwcコマンドのuim IM版です。
 
 セレクションやクリップボード内のテキストを取得するため、
 uimのtext acquisition API(surrounding text API)を使うので、
-text acquisition APIに対応したブリッジ(以下)でのみ動作します。
+text acquisition APIに対応した以下のブリッジでのみ動作します。
 
   * uim-gtk
-  * uim-qt4
+  * uim-qt4 (uim-1.7.1ではlineeditのみ対応。textedit対応はtrunk r7266以降)
   * uim-qt3
 
 インストール
