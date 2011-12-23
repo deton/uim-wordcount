@@ -6,7 +6,7 @@ uim-wordcountはwcコマンドの[uim](http://code.google.com/p/uim/) IM版で�
 行数・単語数(英文)・文字数(改行・空白含む)・(UTF-8での)バイト数
 を数えて表示します。
 
-![表示例](https://github.com/deton/uim-wordcount/raw/master/uim-wordcount-capture.png "表示例")
+![表示例](https://github.com/deton/uim-wordcount/raw/master/uim-wordcount-capture.png)
 
 必要なもの
 ==========
@@ -38,8 +38,9 @@ uim-pref-gtkやuim-pref-qt4を起動し、
 使用方法
 ========
 
-uim-toolbarや「一時切り替えキー」を使って、wordcount IMに切り替えます。
-![アイコン](https://github.com/deton/uim-wordcount/raw/master/pixmaps/wordcount.png "アイコン")
+uim-toolbarや「一時切り替えキー」を使って、wordcount IM
+(アイコン: ![アイコン](https://github.com/deton/uim-wordcount/raw/master/pixmaps/wordcount.png))
+に切り替えます。
 
 文字列を選択して、sキーを押すと文字数等が表示されます。
 
