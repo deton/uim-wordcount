@@ -15,6 +15,8 @@ clipboard text like wc command.
 Requirements
 ============
 
+  * uim trunk r7271 or newer.
+
 uim-wordcount uses uim text acquisition API (surrounding text API)
 to acquire selection or clipboard text.
 Uim text acquisition API is supported by following bridges.
@@ -64,3 +66,11 @@ Remark
 The pop-up window for count result is shown near the bottom of
 selection text, so the window may be placed out of screen.
 Please scroll to the bottom of selection text.
+
+See Also
+========
+
+* uim-external-filter https://github.com/deton/uim-external-filter
+* uim-japan-util https://github.com/deton/uim-japan-util
+* uim-fmt-ja https://github.com/deton/uim-fmt-ja
+* uim-external-editor https://github.com/deton/uim-external-editor

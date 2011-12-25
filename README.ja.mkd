@@ -15,6 +15,8 @@ uim-wordcountはwcコマンドの[uim](http://code.google.com/p/uim/) IM版で�
 必要なもの
 ==========
 
+  * uim trunk r7271以降
+
 セレクションやクリップボード内のテキストを取得するため、
 uimのtext acquisition API(surrounding text API)を使うので、
 text acquisition APIに対応した以下のブリッジでのみ動作します。
@@ -63,3 +65,11 @@ uim-toolbarや「一時切り替えキー」を使って、wordcount IM
 結果表示ウィンドウは、セレクション末尾あたりに表示されるため、
 画面外に表示される場合があります。
 セレクション末尾までスクロールしてください。
+
+関連
+====
+
+* uim-external-filter https://github.com/deton/uim-external-filter
+* uim-japan-util https://github.com/deton/uim-japan-util
+* uim-fmt-ja https://github.com/deton/uim-fmt-ja
+* uim-external-editor https://github.com/deton/uim-external-editor
