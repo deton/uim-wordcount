@@ -15,15 +15,16 @@ clipboard text like wc command.
 Requirements
 ============
 
-  * uim trunk r7271 or newer.
+  * uim 1.7.2 or newer.
 
 uim-wordcount uses uim text acquisition API (surrounding text API)
 to acquire selection or clipboard text.
 Uim text acquisition API is supported by following bridges.
 
   * uim-gtk
-  * uim-qt4 (lineedit only at uim-1.7.1. textedit is supported at trunk r7266)
+  * uim-qt4
   * uim-qt3
+  * MacUIM 0.6.15-1
 
 Install
 =======
